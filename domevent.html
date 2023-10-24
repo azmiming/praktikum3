@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar dom event</title>
+</head>
+<body>
+    <h1 id="uji_heading"
+        onmouseover ="sorot(this)"
+        onmouseover ="KeluarSorot(this)">
+        Sorot dong!
+    </h1>
+    <h2 id="uji_klik" onmouseover = "tahan(this)" onmouseup="lepas(this)">klik dong!</h2>
+    <script>
+        function sorot(obj) {
+            obj.innerHTML = "Sudah disorot"; 
+        }
+        function keluarsorot(obj) {
+            obj.innerHTML = "Sorot Lagi dong!";
+        }
+        function tahan(obj) {
+            obj.innerHTML = "Lepasin....";
+        }
+        function lepas(obj) {
+            obj.innerHTML = "klik Lagi dong!";
+        }
+        function klik() {
+            valueInput = document.getElementById('uji_input').value;
+            document.getElementById('uji_span');
+
+            if (valueInput == "") {
+                span.innerHTML = "Inputan kosong";
+                span.style = "color:red";
+            } else {
+                span.innerHTML = "input :'"+valueInput+"'";
+                span.style = "color:blue";
+            }
+        }
+
+        <button onclick="ulangi()">Ulangi</button>
+
+        function ulangi () {
+            document.getElementById('uji_input').value= "";
+            document.getElementById('uji_span').innerHTML= "";
+            document.getElementById('uji_heading').innerHTML= "Sorot dong!";
+            document.getElementById('uji_heading').innerHTML= "klik dong";
+        }
+    </script>
+    
+</body>
+</html>
